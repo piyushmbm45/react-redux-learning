@@ -1,1 +1,12 @@
-console.log("Hello World!");
+import store from './store';
+
+store.dispatch({
+  type: 'bugAdded',
+  payload: {
+    description: 'bug1',
+  },
+});
+
+console.log(store.getState());
+
+console.log('Hello World!');
